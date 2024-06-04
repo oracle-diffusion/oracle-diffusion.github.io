@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description"
+        content="ORACLE: Leveraging Mutual Information for Consistent Character Generation with LoRAs in Diffusion Models"">
+        <meta name="keywords" content="Diffusion Models, Computational Creativity, Personalization">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--         <script src="https://www.w3counter.com/tracker.js?id=151390"></script> -->
+        <title>ORACLE</title>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+        dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-PYVRSFMDRL');
+        </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+    </head>
+
+    <body>
+
+      <section class="hero">
+        <div class="hero-body">
+          <div class="container is-max-desktop">
+            <div class="columns is-centered">
+              <div class="column has-text-centered">
+                <h1 class="title is-1 publication-title">ORACLE: Leveraging Mutual Information for Consistent Character Generation with LoRAs in Diffusion Models</h1>
+<!--                 <h3 class="title is-3">CVPR 2024</h3> -->
+                <div class="is-size-5 publication-authors">
+                  <span class="author-block">
+                    <a href="#">Kiymet Akdemir</a>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://pinguar.org/">Pinar Yanardag</a>
+                  </span>
+                </div>
+      
+                <div class="is-size-5 publication-authors">
+                  <span class="author-block">Virginia Tech</span>
+                </div>
+      
+                <div class="column has-text-centered">
+                  <div class="publication-links">
+                    <!-- PDF Link. -->
+                    <span class="link-block">
+                      <!-- TODO: Change -->
+                      <a href="https://arxiv.org/abs/" 
+                         class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+                    <!-- Code Link. -->
+                    <span class="link-block">
+                      <a
+                         class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        <span>Code (Coming soon)</span>
+                        </a>
+                    </span>
+                    <!-- Dataset Link. -->
+                    <!-- <span class="link-block">
+                      <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                         class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                            <i class="far fa-images"></i>
+                        </span>
+                        <span>Data</span>
+                        </a> -->
+                  </div>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hero teaser">
+        <div class="container is-max-desktop">
+          <div class="hero-body">
+            <div class="container">
+                <img src="./static/images/teaser.png" />
+                <br/>
+                <p>
+                  Given a text prompt such as 'a cute child with curly chair, cartoon style' (refer to the top row), our approach seamlessly produces consistent characters in a zero-shot manner by leveraging a pre-trained Stable Diffusion model. It ensures character consistency across a wide array of settings and backgrounds, demonstrating the versatility and practicality of our method.  Our method has the potential to enhance creative process in art and design, enabling more detailed storytelling and consistent character portrayal in animations, video games, and interactive media.
+                </p>
+            </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container is-max-desktop">
+          <!-- Abstract. -->
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3">Abstract</h2>
+              <div class="content has-text-justified">
+                <p>
+                  Text-to-image diffusion models have recently taken center stage as pivotal tools in promoting visual creativity across an array of domains such as comic book artistry, children's literature, game development, and web design. These models harness the power of artificial intelligence to convert textual descriptions into vivid images, thereby enabling artists and creators to bring their imaginative concepts to life with unprecedented ease. However, one of the significant hurdles that persist is the challenge of maintaining consistency in character generation across diverse contexts. Variations in textual prompts, even if minor, can yield vastly different visual outputs, posing a considerable problem in projects that require a uniform representation of characters throughout. In this paper, we introduce a novel framework designed to produce consistent character representations from a single text prompt across diverse settings.  Through both quantitative and qualitative analyses, we demonstrate that our framework outperforms existing methods in generating characters with consistent visual identities, underscoring its potential to transform creative industries. By addressing the critical challenge of character consistency, we not only enhance the practical utility of these models but also broaden the horizons for artistic and creative expression.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--/ Abstract. -->
+      
+        
+        <!-- Method -->
+        <section class="section">
+          <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-12">
+                <h2 class="title is-3">Method</h2>
+      
+                <div class="content has-text-justified">
+                  <!--
+                  <p>
+                   Explain method
+                  </p>
+                -->
+                  <div class="container">
+                    <img src="./static/images/framework.png" />
+                    <br />
+                  </div>
+      
+                  <p>
+                  Our method operates through three phases: 1) It begins with the generation of a grid based on structured prompts that include character description, style, and a grid generator prompt, like <i>"from different angles"</i>. 2) Subsequently, it calculates the average pairwise mutual information to identify potential outliers. 3) Once outliers are filtered out, a personalized model is trained using the refined grid segments.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+           <!--/ Method -->
+      
+          <!-- Paper video. -->
+          <section class="section">
+            <div class="container is-max-desktop">
+                <h1 class="title is-3 has-text-centered">Qualitative Results</h1>
+              <div class="columns is-centered has-text-centered">
+                <div class="column is-12">
+        
+                  <div class="content has-text-justified">
+                    <div class="container" style="width: 100%;">
+                      <img src="./static/images/qual-results.png" width="100%"/>
+                      <br/>
+                    </div>
+        
+                    <p>
+                      <b>Qualitative results.</b> Our method can produce a wide array of characters in diverse contexts and styles, from imaginative figures like <i>'a bulldog wearing a jacket'</i> and <i>'a pink owl'</i>, to photo-realistic characters such as <i>'a woman with a purple scarf'</i>.
+                    </p>
+
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <section class="section">
+            <div class="container is-max-desktop">
+                <h1 class="title is-3 has-text-centered">Applications</h1>
+              <div class="columns is-centered has-text-centered">
+                <div class="column is-12">
+        
+                  <div class="content has-text-justified">
+                    <div class="container" style="width: 100%;">
+                      <img src="./static/images/applications.png" width="100%"/>
+                      <br/>
+                    </div>
+        
+                    <p>
+                      Our method have various applications, including story illustration and 3D character reconstruction. Although the model is specifically trained for the man, it possesses the capability to generate images of the character's family or child. This capability  broadens the scope of illustrations achievable with a single trained model. Moreover, our characters can be transformed into 3D, using off the shelf methods such as <a href="https://huggingface.co/stabilityai/TripoSR">TripoSR</a>.
+                    </p>
+
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+          <section class="section" id="BibTeX">
+            <div class="container is-max-desktop content">
+              <h2 class="title">BibTeX</h2>
+              <pre><code>
+  @misc{yesiltepe2024mist,
+      title={MIST: Mitigating Intersectional Bias with Disentangled Cross-Attention Editing in Text-to-Image Diffusion Models}, 
+      author={Hidir Yesiltepe and Kiymet Akdemir and Pinar Yanardag},
+      year={2024},
+      eprint={2403.19738},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+              </code></pre>
+            </div>
+          </section>
+          
+          <footer class="footer">
+            <div class="container">
+              <div class="content has-text-centered is-centered">
+                <a class="icon-link" href="https://github.com/kiymetakdemir" class="external-link" disabled>
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+              <div class="columns">
+                <div class="column is-8">
+                  <div class="content has-text-justified">
+                    <!-- <p>
+                      This website is licensed under a <a rel="license"
+                                                          href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                      Commons Attribution-ShareAlike 4.0 International License</a>.
+                    </p> -->
+                    <p>This page is adapted from <a
+                        href="https://github.com/nerfies/nerfies.github.io">this</a> implementation.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+    </body>
+</html>
